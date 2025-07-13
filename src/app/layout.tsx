@@ -4,6 +4,9 @@ import LenisProvider from './components/LenisProvider'
 export const metadata = {
   title: 'Fortitude Genius Indonesia',
   description: 'Animated Portfolio',
+  icons: {
+    icon: '/images/favicon.jpg', 
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
