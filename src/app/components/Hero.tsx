@@ -1,7 +1,11 @@
 'use client'
 import { motion } from 'framer-motion'
 import Buttons from './Buttons'
-import BrandStrip from './BrandStrip'
+import Link from 'next/link'
+
+const navLinks = [
+  { name: 'Our Projects', href: '#projects' },
+];
 
 export default function HeroSection() {
   return (
@@ -13,8 +17,8 @@ export default function HeroSection() {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover scale-125 brightness-[0.9] z-0"
-        style={{ filter: "blur(2px)" }}
+        className="absolute inset-0 w-full h-cover object-cover scale-125 brightness-[0.9] z-0"
+        style={{ filter: "blur(5px)" }}
       >
         <source src="./images/gfish-hero.mp4" type="video/mp4" />
       </video>
@@ -37,12 +41,20 @@ export default function HeroSection() {
             We transform ideas into impactful digital solutions by combining technology, creativity, and strategy to help businesses thrive in the modern era.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Buttons className="px-7 py-2 rounded-lg bg-white/10 border border-white/30 text-white font-semibold text-lg hover:bg-white/20 shadow transition duration-200">
-              See More Now
-            </Buttons>
-            <Buttons className="px-7 py-2 rounded-lg bg-white border border-white/30 text-black font-semibold text-lg hover:bg-white/80 shadow transition duration-200">
-              See Our Project
-            </Buttons>
+            {navLinks.map(link => (
+              <Link key={link.name} href={link
+.href}>
+                <motion.a
+                  className="px-8 py-3 rounded-full bg-white text-black font-bold text-lg shadow-lg transition-all hover:bg-white/90 hover:text-black relative"
+                  whileHover={{ scale: 1.05 }}
+                  style={{
+                    boxShadow: '0 4px 18px 0 #fff3, 0 0px 24px #fff1'
+                  }}
+                >
+                  {link.name}
+                </motion.a>
+              </Link>
+              ))}
           </div>
         </motion.div>
         {/* Scroll down */}
@@ -66,8 +78,8 @@ export default function HeroSection() {
       
       {/* Brand strip at the bottom */}
       <div className="w-full relative z-20">
-        <BrandStrip />
       </div>
     </section>
+    
   )
 }

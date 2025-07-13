@@ -34,7 +34,7 @@ const cards = [
 
 export default function KontakSection() {
   return (
-    <section className="w-full bg-black flex flex-col items-center py-0 min-h-[120vh]">
+    <section className="w-full bg-black flex flex-col items-center py-0 min-h-[120vh]" id="contact">
       <div className="w-full max-w-[1600px] flex flex-col gap-16 px-4 sm:px-10 md:px-20">
         {/* --- Top Row --- */}
         <div className="flex flex-col md:flex-row gap-14 pt-16 pb-6">
@@ -52,11 +52,7 @@ export default function KontakSection() {
             <hr className="border-[#222] mb-10"/>
             {/* Buttons */}
             <div className="flex flex-row gap-8 mb-4">
-              <button className="px-8 py-3 rounded-full bg-white/10 border border-white/20 text-white font-bold text-xl shadow-lg transition-all hover:bg-white/20 relative"
-                style={{
-                  boxShadow: '0 4px 18px 0 #fff3, 0 0px 24px #fff1'
-                }}
-              >Book a Free Call</button>
+              
               <Link href="#projects">
                 <button className="px-8 py-3 rounded-full bg-white text-black font-bold text-xl shadow-lg transition-all hover:bg-white/90 hover:text-black relative"
                   style={{

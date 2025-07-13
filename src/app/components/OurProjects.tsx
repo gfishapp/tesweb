@@ -4,7 +4,7 @@ import Link from 'next/link'
 // Team Data
 const teamProjects = [
   {
-    title: "Gay-Fish",
+    title: "G-Fish",
     image: "/images/ENIUS fISH (2).png",
     link: "#",
   },
@@ -19,7 +19,7 @@ const teamProjects = [
 
 export default function OurProjects() {
   return (
-    <section className="w-full flex flex-col items-center py-16 bg-black min-h-[90vh]">
+    <section className="w-full flex flex-col items-center py-16 bg-black min-h-[90vh]" id="projects">
       {/* Meet Our Team Title */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
