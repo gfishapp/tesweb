@@ -21,16 +21,17 @@ export default function Navbar() {
         <ul className="flex space-x-10">
           {navLinks.map(link => (
             <li key={link.name}>
-              <Link href={link.href} >
-                <motion.a
-                  className="text-lg font-semibold text-white hover:text-accent transition-colors duration-200 px-2 py-1 rounded"
-                  whileHover={{ color: "#38B6FF" }}
-                  transition={{ duration: 0.24 }}
-                  style={{ cursor: "pointer" }}
-                >
-                  {link.name}
-                </motion.a>
-              </Link>
+              <Link href={link.href}>
+  <motion.span
+    className="text-lg font-semibold text-white hover:text-accent transition-colors duration-200 px-2 py-1 rounded"
+    whileHover={{ color: "#38B6FF" }}
+    transition={{ duration: 0.24 }}
+    style={{ cursor: "pointer" }}
+  >
+    {link.name}
+  </motion.span>
+</Link>
+
             </li>
           ))}
         </ul>

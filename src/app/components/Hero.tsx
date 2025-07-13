@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
-import Buttons from './Buttons'
 import Link from 'next/link'
+import Buttons from './Buttons'
 
 const navLinks = [
   { name: 'Our Projects', href: '#projects' },
@@ -42,8 +42,7 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             {navLinks.map(link => (
-              <Link key={link.name} href={link
-.href}>
+              <Link key={link.name} href={link.href}>
                 <motion.a
                   className="px-8 py-3 rounded-full bg-white text-black font-bold text-lg shadow-lg transition-all hover:bg-white/90 hover:text-black relative"
                   whileHover={{ scale: 1.05 }}
@@ -54,7 +53,7 @@ export default function HeroSection() {
                   {link.name}
                 </motion.a>
               </Link>
-              ))}
+            ))}
           </div>
         </motion.div>
         {/* Scroll down */}
@@ -75,11 +74,6 @@ export default function HeroSection() {
           <span className="text-white/60 text-sm">to see projects</span>
         </div>
       </div>
-      
-      {/* Brand strip at the bottom */}
-      <div className="w-full relative z-20">
-      </div>
     </section>
-    
   )
 }
