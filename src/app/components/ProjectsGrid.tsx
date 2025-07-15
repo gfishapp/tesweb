@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import BrandStrip from './BrandStrip'
-
+import SponsorStrip from './SponsorStrip'
 const projects = [
   {
     title: "Chief Operating Officer (CEO) & Founder",
@@ -59,7 +59,7 @@ const projects = [
   },
   {
     title: "Head of Legal",
-    name : "Hafid",
+    name : "Abdul Hafid",
     image: "/images/fotoa.jpg",
     link: "#",
   },
@@ -74,8 +74,9 @@ const projects = [
 export default function ProjectGrid() {
   return (
     
-    <section className="w-full flex flex-col items-center py-16 bg-black min-h-[90vh]">
+    <section className="w-full flex flex-col items-center py-16 bg-black min-h-[90vh]" id="team">
       <BrandStrip />
+      <SponsorStrip />
       {/* Meet Our Team Title */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
